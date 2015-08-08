@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
     prize_door = rand() % NDOOR;
     doors[prize_door]++;
     select_door = rand() % NDOOR;
-    if(doors[select_door]>0) { // selected door has prize
+    if(doors[select_door]) { // selected door has prize
       do {
 	open_door=rand() % NDOOR;
       } while (open_door == prize_door); // note ==
